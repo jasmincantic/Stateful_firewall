@@ -1,0 +1,5 @@
+table_set_default ipv4_lpm drop
+table_add ipv4_lpm ipv4_forward 10.0.1.1/32 => 9a:99:8a:0e:8c:1b 1
+table_add ipv4_lpm ipv4_forward 10.0.1.2/32 => 9a:99:8a:0e:8c:1b 1
+table_add ipv4_lpm ipv4_forward 10.0.2.3/32 => 9a:99:8a:0e:8c:aa 2
+table_add ipv4_lpm ipv4_forward 10.0.2.4/32 => 9a:99:8a:0e:8c:aa 2

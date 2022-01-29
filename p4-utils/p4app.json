@@ -1,0 +1,37 @@
+{
+  "cli": true,
+  "pcap_dump": true,
+  "enable_log": true,
+  "topology": {
+    "assignment_strategy" : "mixed",
+    "links": [["h1", "s1"], ["h2", "s1"], ["h3", "s2"], ["h4", "s2"], ["s1", "s3"], ["s1", "s4"], ["s2", "s3"], ["s2", "s4"]],
+    "hosts": {
+      "h1": {
+      },
+      "h2": {
+      },
+      "h3": {
+      },
+      "h4": {
+      }
+    },
+    "switches": {
+      "s1": {
+        "cli_input": "s1-commands.txt",
+        "p4_src": "firewall.p4"
+      },
+      "s2": {
+        "cli_input": "s2-commands.txt",
+        "p4_src": "ip_forwarding.p4"
+      },
+      "s3": {
+        "cli_input": "s3-commands.txt",
+        "p4_src": "ip_forwarding.p4"
+      },
+      "s4": {
+        "cli_input": "s4-commands.txt",
+        "p4_src": "ip_forwarding.p4"
+      }
+    }
+  }
+}
